@@ -1,5 +1,6 @@
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 // See Lecture 52, part 2
+(function(window) {
 
 
 // STEP 3: Create an object, called 'helloSpeaker' to which you will attach
@@ -23,11 +24,6 @@ function speak(name) {
 // (Note, Step 6 will be done in the SpeakGoodBye.js file.)
 // xxxx.xxxx = helloSpeaker;
 
-(function (window) {
- var helloSpeaker = {};
- var greeting = "Hello ";
- helloSpeaker.sayHello = function () {
-  console.log(greeting + helloSpeaker.name);
- }
- window.helloSpeaker = helloSpeaker;
+window.helloSpeaker = helloSpeaker;
+ 
 })(window);
